@@ -1,0 +1,42 @@
+html,body{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{margin:0;padding:0;}
+a{text-decoration: none;cursor: pointer; }
+a:link{color:rgb(146, 150, 153);}
+a:visited{color:#669;}
+ul, ul li{list-style: none; overflow: hidden;}
+
+header{width:100%;height:14rem;}
+#navbar{ background-color:#545652;height:2.15rem;width:100%;}
+#navbar li{line-height: 2.15rem;float:left;margin:0 1.15rem 0 0.385rem;}
+#navbar li:nth-last-child(2) , #navbar li:nth-last-child(1){float:right;}
+#navbar li a{color: #d5d5d5;}
+#navbar li a:hover{color: #fff;}
+
+#nav-search{width: 100%;height:5.7rem;background: #f0f3f5;border-bottom: 0.077rem solid #e2e2e2;display:flex;justify-content:center;align-items: center;}
+#nav-search .nav-search-con{width:50%;overflow: hidden;}
+.logo{width:15.6%;line-height: 5.7rem;float: left;}
+.logo a{font-size: 2.2rem;color: #27a;font-weight: bold;letter-spacing: 0.077rem;}
+.form-input-wrap{width:60%;line-height:5.7rem;float:left;}
+.input-kw{padding-left:1rem;width:75%;height:2.5rem;border:none;box-shadow:0.077rem 0.077rem 0 0  #aca6a6;border-radius: 0.385rem 0 0 0.385rem;}
+.input-button{width:2.5rem;height:2.5rem;border:none;position:relative;left:-0.3rem;background-color:rgb(160, 156, 156);box-shadow:0.077rem 0.077rem 0 0  #aca6a6;border-radius:0  0.385rem 0.385rem 0;color: white;cursor: pointer;  }
+
+
+#nav-link{height:3rem;width:100%; background: #f0f3f5;}
+.nav-link-con{ width:50%;margin:0 auto;}
+.nav-link-con ul li{ float: left; margin-right: 2.3rem;line-height: 3rem; }
+.nav-link-con ul a{ color: #27a; }
+.nav-link-con ul li a:hover{color: #fff; background-color: #27a;}
+
+#center-body .main-con{width:70%;margin:0 auto;}
+#center-body .main-content{width:70%;float:left;}
+#center-body .sidebar{width:28%;float:right;}
+
+footer{width:100%;height:2rem;}
+#footer-con{width:50%;margin:0 auto;}
+#footer-con a,#footer-con span{line-height:2rem;font-size: 0.5rem;letter-spacing: -0.01rem;}
+#footer-con a:hover{color: #fff; background-color: #27a;}
+.icp{float: left;color:#999;}
+.icp-right{float:right;}

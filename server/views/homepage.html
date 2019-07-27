@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initilal-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>豆瓣电影</title>
+<link rel="stylesheet"  href="css/homepagestyle.css" type="text/css"/>
+<link rel="stylesheet"  href="css/common.css" type="text/css"/>
+</head>
+<body>
+{{include './component/header.html'}}
+
+
+
+  <div id="center-body">
+        <div class="main-con">
+            <div class="main-content">
+
+             <div class="hot-released-film">
+                    <div class="top-box">
+                        <span >正在上映</span>
+                            <ul>
+                                <li><a href="/film">全部正在热映&raquo</a></li>
+                                <li><span class="pages">1/5</span></li>
+                                <li class="pre" ><a onclick="pre(this)">&rsaquo;</a></li>
+                                <li class="next"><a onclick="next(this)">&lsaquo;</a></li>
+                                </ul>
+                                
+                                
+                    </div>
+                    <div class="box-con" >
+                        <div class="container" id="container" style="left:0;">
+                            <ul>
+                                    {{each film as item}}
+                        <li>
+                        <div class="box" >
+                        <ul class="ul-box" id="{{item.doubanId}}">
+                           <li class="poster "><a  href="/film/{{item.doubanId}}"> <img src="{{item.poster}}" alt="{{item.title}}"  /></a></li>
+                           <li class="title"><a  href="/film/{{item.doubanId}}" >{{item.title}}</a></li>
+                           <li><span class="rating-star allstar35"></span><span class="rate">{{item.rate}}</span></li>
+                           <li class="purchase"><span><a href="/purchase" target="_blank">选座购票</a></span></li>
+                        </ul>
+                        </div>
+                        </li>
+                        {{/each}}
+                      </ul>
+
+                    </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="con">
+                    <div class="top-box ">
+                        <span >最近热门电影</span>
+                            <ul>
+                                    {{each movietags as tag}}
+                                    <li><a href="#">{{tag}}</a></li>
+                                       {{/each}}
+                                <li><a href="/movie#!tag=热门&page_limit=20&page_start=0" class ="more">更多&raquo</a></li>
+                            </ul>
+                            
+                    </div>
+
+
+                    <div class="box-con" >
+                            <div class="container" style="left:0;">
+                                <ul>
+                                        {{each movie as item}}
+                            <li>
+                            <div class="box" onclick="window.open('/movie/{{item.doubanId}}')"  id="{{item.doubanId}}">
+                            <ul >
+                               <li class="poster "><a > <img src="{{item.poster}}" alt="{{item.title}}" /></a></li>
+                               <li class="title"><a >{{item.title}}<span class="rate">{{item.rate}}</span></a></li>
+                               
+                            </ul>
+                            </div>
+                            </li>
+                            {{/each}}
+                          </ul>
+    
+                        </div>
+    
+
+                    </div>
+                    <div class="page-control">
+                            <ul>
+                            <li class="pre" ><a onclick="pre(this)">&rsaquo;</a></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                            <li class="next"><a onclick="next(this)">&lsaquo;</a></li>
+                        </ul>
+                        </div>
+                </div>
+                
+                <div class="con">
+                    <div class="top-box ">
+                        <span >最近热门电视剧</span>
+                            <ul>
+                                    {{each tvtags as tag}}
+                                    <li><a href="#">{{tag}}</a></li>
+                                       {{/each}}
+                                <li><a href="/tv#!tag=热门&page_limit=20&page_start=0" class ="more">更多&raquo</a></li>
+                            </ul>
+                            
+                    </div>
+
+
+                    <div class="box-con" >
+                            <div class="container" style="left:0;">
+                                <ul>
+                                        {{each tv as item}}
+                            <li>
+                            <div class="box" onclick="window.open('/tv/{{item.doubanId}}')"  id="{{item.doubanId}}">
+                            <ul >
+                               <li class="poster "><a > <img src="{{item.poster}}" alt="{{item.title}}" /></a></li>
+                               <li class="title"><a >{{item.title}}<span class="rate">{{item.rate}}</span></a></li>
+                               
+                            </ul>
+                            </div>
+                            </li>
+                            {{/each}}
+                          </ul>
+    
+                        </div>
+    
+
+                    </div>
+                    <div class="page-control">
+                            <ul>
+                            <li class="pre" ><a onclick="pre(this)">&rsaquo;</a></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                             <li><span class="circle"></span></li>
+                            <li class="next"><a onclick="next(this)">&lsaquo;</a></li>
+                        </ul>
+                        </div>
+                </div>
+               
+
+                <div class="recommodation">
+                    <div class="top-box ">
+                        <span >热门推荐</span>
+                        <div class="page-control">
+                            <ul>
+                                    <li><span class="pages">1/8</span></li>
+                            <li class="pre" ><a onclick="pre(this)">&rsaquo;</a></li>
+                            <li class="next"><a onclick="next(this)">&lsaquo;</a></li>
+                        </ul>
+                        </div>
+                            
+                    </div>
+
+
+                    <div class="box-con" >
+                        <div class="container" style="left:0;">
+                            <ul>
+                            <% for(var i = 0; i < 10; i++){ %>
+                        <li>
+                        <div class="box">
+                           <div class="pic "><a  href="#"> <img src="https://img1.doubanio.com/view/movie_gallery_frame_hot_rec/normal/public/4cd1a470f48d0aa.jpg" alt="毛绒绒的兔子回来啦！" /></a></div>
+                           <div class="words">
+                           <div class="title"><a  href="#" >毛绒绒的兔子回来啦！</a></div>
+                           <div class="description"><p>《比得兔 2》探班全纪录</p></div>
+                        </div>
+                        </div>
+                        </li>
+                        <% } %> 
+                      </ul>
+                       </div>
+                    </div>
+
+       
+                </div> 
+                
+                
+
+                <div class="comment">
+
+                    <div class="top-box">
+                        <span >最受欢迎的影评</span>
+                            <ul>
+                                <li><a href="#">更多热门影评&raquo</a></li>
+                                <li><a href="#">新片影评&raquo</a></li>
+                                </ul>
+                    </div>
+                <div class="review-box">
+                    <ul>
+                    <% for(var i = 0; i < 5; i++){ %>
+                    <li class="review">
+                        
+                        <div class="review-hd"><a href="#"><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2530599636.webp" alt="小偷家族" /></a></div>
+                        <div class="review-bd">
+                            <h3><a href="https://movie.douban.com/review/9575998/">《小偷家族》哪个地方让你动情了？</a></h3>
+                            <div class="review-meta">
+                                <a href="https://www.douban.com/people/182091851/">少一个</a> 评论
+                                <a href="https://movie.douban.com/subject/27622447/?from=reviews">《小偷家族》</a>
+                                    <span class="allstar50"></span>
+                            </div>
+                            <div class="review-content">
+                                等了很久，终于刷了是枝裕和的《小偷家族》。满分的满意。 看完后也终于理解，之前让我很意外的，很多日本人觉得是枝裕和的金棕榈奖，是国家的耻辱：为什么要向全世界输出日本的小偷形象？ 为了反驳这种论调，说...
+                                    <a href="https://movie.douban.com/review/9575998/">(全文)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <% } %> 
+                </ul>
+            </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="sidebar">
+                <div class="useless"><a href="#">豆瓣电影评分八问</a></div>
+                <div class="activity">
+                    <ul>
+                        <li class="activity-title"><p>电影活动  - - - - - - -</p></li>
+                        <li><a href="#">法国天才导演如何打造轰动影坛的话题之作？</a></li>
+                        <li><a href="#">法国天才导演如何打造轰动影坛的话题之作？</a></li>
+                        <li><a href="#">法国天才导演如何打造轰动影坛的话题之作？</a></li>
+                    </ul>
+                </div>
+                <div class="popular-list">
+                    <div class="popular-list-head">
+                        <p>一周口碑榜</p>
+                        <a href="#" >更多榜单&raquo</a>
+                    </div>
+                        <ol>
+                                <% for(var i = 0; i < 10; i++){ %>
+                                    <li><a href="/movie/{{movie[i].doubanId}}"  id="{{movie[i].doubanId}}">{{movie[i].title}}</a></li>
+                                    <% } %> 
+                        </ol>
+                </div>
+                <div class="popular-doulie">
+
+                    <ul>
+                        <li><p>热门豆列</p></li>
+                        <li><a href="#">【你连名字都这么牛逼】</a><span>6088推荐</span></li>
+                        <li><a href="#">【你连名字都这么牛逼】</a><span>6088推荐</span></li>
+                    </ul>
+
+                </div>
+
+                <div class="contact">
+                   <div class="popular-doulie"><p>合作联系</p></div>
+                   <ul>
+                      <li><p>电影合作邮箱：movie@douban.com</p></li> 
+                      <li><p>电视剧合作邮箱：tv@douban.com</p></li> 
+                      <li><p>豆瓣影人PRO合作邮箱：pro@douban.com</p></li> 
+                   </ul>
+                </div>
+
+                <div class="followus">
+                    <div><h2>关注我们</h2></div>
+                    <div class="icon">
+                       
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        </div>
+  
+
+
+
+    
+
+    
+    
+
+{{include './component/footer.html'}}
+
+
+
+
+<script>
+
+
+var oBox = document.getElementById("film-con");
+//var oUl = document.getElementById("container");  
+var cur = 0; //定义一个变量用于设置left值
+var timer = null; //定义一个计时器
+var target = 0;
+var timer1 = null; 
+timer = setInterval(autoPlay, 1000); // 定义计时器每25毫秒执行一次
+function autoPlay() { //执行每次执行函数，left值减1
+    if (target <= -500) {
+        cur = 0;
+        target = -100;
+    } else {
+        target -= 100;
+    }
+    sport(target);
+}                                                                                                                                                                                                                                     
+var pre = function(argument) {
+    var oul = argument.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild;
+    if (target <= -500) {
+        cur = 0;
+        target = -100;
+    } else {
+        target -= 100;
+    }
+   
+    sport(oul,target)
+}   
+var next = function(argument) {
+    var oul = argument.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild;
+    if (target > -100) {
+       cur -= 500;
+       target = -400; 
+
+    } else{
+        target += 100;
+    }
+   
+    sport(oul,target)
+}   
+
+
+
+ function sport(Oul,tar) {
+    clearInterval(timer1);
+    timer1 = setInterval(autoPlay, 30); //设置定时器每30毫秒执行一次
+    function autoPlay() { 
+        if (cur == tar) {
+            clearInterval(timer1) //大于目标值时，清空计时器
+        } else {
+            speed = (tar - cur) / 7; //计算速度
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed); //取整
+            cur = cur + speed; 
+            Oul.style.left = cur + "%";
+        }
+    }
+}
+// function next(node){
+// 　　if(node.nextElementSibling){
+// 　　return node.nextElementSibling;
+// 　　}else{
+// 　　return node.nextSibling;
+// 　　}
+// 　　}
+// oBox.onmouseover = function() { //移出时清除计时器
+//     clearInterval(timer);
+// }
+// oBox.onmouseout = function() { //移入时开始计时器
+//     timer = setInterval(autoPlay, 2000);
+// }
+ 
+</script>
+　　
+</body>
+</html>

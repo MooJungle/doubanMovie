@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initilal-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>热门电视剧</title>
+<link rel="stylesheet"  href="css/morestyle.css" type="text/css"/>
+<link rel="stylesheet"  href="css/common.css" type="text/css"/>
+</head>
+<body>
+{{include './component/header.html'}}
+
+<div id="center-body">
+        <div class="main-con">
+
+            <div class="main-content">
+        
+    <div class="more-nav">
+    <h1>热门电视剧</h1>
+    <ul>
+            {{each tags as tag}}
+        <li><a href="#">{{tag}}</a></li>
+           {{/each}}
+    </ul>
+</div>
+
+<div class="more-main">
+    <div class="controler">
+    <div class="sorting">
+            　　<label><input type="radio" name ="sorting" value="hotty" checked>按热度排序</label>
+            　　<label><input type="radio" name ="sorting" value="time" >按时间排序</label>   
+            　　<label><input type="radio" name ="sorting" value="comment">按评价排序</label>
+    </div>
+    <div class="filter">
+            　　<label><input type="checkbox" name ="filter" value="not-seen">我没看过的</label>
+            　　<label><input type="checkbox" name ="filter" value="can-play">可在线播放</label>   
+    </div>
+</div>
+
+<div class="more-box" >
+            <ul>
+            {{each data as item}}
+        <li>
+        <div class="box" onclick="window.open('/tv/{{item.doubanId}}')" id="{{item.doubanId}}">
+        <ul>
+           <li class="poster "><a> <img src="{{item.poster}}" alt="{{item.title}}"  /></a></li>
+           <li class="title"><a>{{item.title}}<span class="rate">{{item.rate}}</span></a></li>
+           
+        </ul>
+        </div>
+        </li>
+       {{/each}}
+      </ul>
+      <div class="loadmore"><a href="javascript:void(0)">加载更多</a></div>
+    </div>
+    
+
+
+</div>
+
+    </div>
+    <div class="sidebar">
+            <div class="popular-doulie">
+
+                <ul>
+                    <li><p>热门豆列</p></li>
+                    <li><a href="#">【你连名字都这么牛逼】</a><span>6088推荐</span></li>
+                    <li><a href="#">【你连名字都这么牛逼】</a><span>6088推荐</span></li>
+                </ul>
+
+            </div>
+
+
+</div>
+    
+        </div>
+
+   
+
+</div>
+
+
+
+
+
+
+
+
+{{include './component/footer.html'}}
+
+
+</body>
+</html>

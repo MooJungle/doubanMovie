@@ -1,0 +1,29 @@
+
+
+.title h2{display: inline;}
+.title a{color:#47a;margin-left:1rem;}
+.title a:hover{color:#fff;background-color: #27a;}
+h3{color:#007722;line-height:3rem;font-size:1.2rem;}
+.box-title{border-bottom:1px solid #9b9b9b;}
+.on{margin-top:2rem;margin-bottom:5rem;}
+.on .box-title{border-bottom:1px solid #9b9b9b;}
+
+.container>ul>li{ display:inline;}
+.box ul{float:left;margin-top:1rem;margin-bottom:1rem;}
+.box ul li{width:120px;display:block;text-align: center;margin-top:0.4rem;margin-right:2.16rem;}
+.box .poster img{width:120px;height:172px;}
+ .box .title a{color:black;white-space:nowrap;text-overflow:ellipsis;}
+ .box .title a{color:black;background-color: white;}
+.box .rate{color:#e09015;}
+.box .purchase  a{padding:1rem 2rem;line-height:1.8rem;background-color: #EBEBEB;color:black;border-radius:0.15rem;}
+.box .purchase  a:hover{background-color: #d9d9d9;}
+
+
+.on .loadmore{background-color:#f7f7f7;height:2.5rem;display:block;text-align: center;margin-top:2rem;}
+.on .loadmore a{line-height:2.5rem;color:#37a}
+.on .loadmore:hover{background-color: #d9d9d9;cursor: pointer;}
+
+
+.preon{margin-top:5rem;margin-bottom:5rem;}
+.preon h3{display: inline;margin-right:1.2rem;}
+.preon ul li p{color:#aaa;}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initilal-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>电影</title>
+<link rel="stylesheet"  href="css/film.css" type="text/css"/>
+<link rel="stylesheet"  href="css/common.css" type="text/css"/>
+</head>
+<body>
+{{include './component/header.html'}}
+
+<div id="center-body">
+        <div class="main-con">
+                <div class="main-content">
+                    <div class="title">
+                         <h2>电影票 -成都</h2>
+                        <a href="#">[切换城市]</a>
+                    </div>
+
+                    <div class="on">
+                        <div class="box-title">
+                        <h3>正在上映</h3>
+                    </div>
+                        <div class="container">
+                        <ul>
+                                {{each nowplaying as item}}
+                                <li>
+                                <div class="box">
+                                <ul class="ul-box" id="{{item.doubanId}}">
+                                   <li class="poster "><a  href="/film/{{item.doubanId}}"  target="_blank"> <img src="{{item.poster}}" alt="{{item.title}}"  /></a></li>
+                                   <li class="title"><a  href="/film/{{item.doubanId}}"  target="_blank">{{item.title}}</a></li>
+                                   <li><span class="rating-star allstar35"></span><span class="rate">{{item.rate || "暂无评分"}}</span></li>
+                                   <li class="purchase"><span><a href="/purchase" target="_blank">选座购票</a></span></li>
+                                </ul>
+                                </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div class="loadmore"><a href="javascript:void(0)">加载更多</a></div>
+                        
+                    </div>
+                    <div class="preon">
+                            <div class="box-title">
+                            <h3>即将上映</h3>
+                            <a href="#">全部</a>
+                        </div>
+                           
+                            <div class="container">
+                                    <ul>
+                                            {{each upcoming as item}}
+                                            <li>
+                                            <div class="box" id="{{item.doubanId}}">
+                                            <ul class="ul-box">
+                                               <li class="poster "><a  href="/film/{{item.doubanId}}"  target="_blank"> <img src="{{item.poster}}" alt="{{item.title}}"  /></a></li>
+                                               <li class="title"><a  href="/film/{{item.doubanId}}"  target="_blank" >{{item.title}}</a></li>
+                                               <li><p>{{item.pubdate[0].date.getMonth()}}月{{item.pubdate[0].date.getDay()}}日上映</p></li>
+                                               <li class="purchase"><span><a href="/purchase" target="_blank">选座购票</a></span></li>
+                                            </ul>
+                                            </div>
+                                            </li>
+                                           {{/each}}
+                                        </ul>
+                                    </div>
+                                
+                    </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+
+
+
+
+
+{{include './component/footer.html'}}
+</body>
+</html>

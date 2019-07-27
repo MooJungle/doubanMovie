@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initilal-scale=1">
+<title>{{data.title}}(豆瓣）</title>
+<link rel="stylesheet"  href="/css/detailstyle.css" type="text/css"/>
+<link rel="stylesheet"  href="/css/common.css" type="text/css"/>
+</head>
+<body>
+{{include './component/header.html'}}
+
+<div id="center-body">
+    <div class="main-con">
+        <div class="main-content">
+            
+            <div class="overview">
+                <div class="title"><h1>{{data.title}}</h1><span>({{data.year}})</span></div>
+                <a href="#"> <img src="{{data.poster}}" alt="{{data.title}}"></a>
+                    <ul>
+                        <li><p>导演：</p><a href="#">{{data.director.toString()}}</a></li>
+                        <li><p>编剧：</p><a href="#">{{data.writer.toString()}}</a></li>
+                        <li><p>主演：</p>{{data.cast.slice(0,4).join("|").toString()}}<a>更多</a></li>
+                        <li><p>类型：</p><a href="#">{{data.movieTypes.toString()}}</a></li>
+                        <li><p>制片国家/地区：{{data.country.toString()}}</p></li>
+                        <li><p>语言：{{data.language.toString()}}</p></li>
+                        <li><p>上映时间：{{each data.pubdate as todate}}{{todate.date.toISOString().slice(0,10)}}({{todate.country}}){{/each}}</p></li>
+                        <li><p>片长：{{data.movie_duration.toString()}}</p></li>
+                    </ul>
+                    <div class="star">
+                        <span>豆瓣评分</span>
+                        <div class="star-type"><p>{{data.rate}}</p></div>
+
+                </div>
+            </div>
+          
+<div class="content">
+            <div class="comment">
+                <ul>
+                        <li><a href="">想看</a></li>
+                        <li><a href="">看过</a></li>
+                        <li><p >评价</p></li><br/>
+                        <li><a href="">写短评</a></li>
+                        <li><a href="">写影评</a></li>
+                        <li><a href="">+提问题</a></li>
+                        <li><a href="">分享到</a></li>
+                        
+                    </ul>
+                    <a href="" class="last">推荐</a>
+            </div>
+
+            <div class="summary">
+                <h3>{{data.title}}的剧情简介--------</h3>
+                <p>{{data.summary}}</p>
+            </div>
+
+            <!-- <div class="actor">
+                <h3>飞驰人生的演员表------（<a href="">全部 43</a>）</h3>
+                <ul>
+                    <li>
+                        <a><img src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p42220.webp" alt="韩寒"></a>
+                        <a>韩寒</a>
+                        <span>导演</span>
+                    </li>
+                    <li>
+                            <a><img src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p42220.webp" alt="韩寒"></a>
+                            <a>沈腾</a>
+                            <span>饰 张驰</span>
+                        </li>
+                        <li>
+                                <a><img src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p42220.webp" alt="韩寒"></a>
+                                <a>沈腾</a>
+                                <span>饰 张驰</span>
+                            </li>
+                            <li>
+                                    <a><img src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p42220.webp" alt="韩寒"></a>
+                                    <a>沈腾</a>
+                                    <span>饰 张驰</span>
+                                </li>
+                </ul>
+                
+
+            </div>
+
+            <div class="pic">
+                    <h3>飞驰人生的视频和图片------（<a href="">预告片30</a>|<a href="">添加视频评论</a>|<a href="">图片517</a>|<a href="">添加</a>）</h3>
+                    <ul>
+                            <li class="first"><a><img src="https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p42220.webp" alt="韩寒"></a></li>
+                            <li><a><img src="https://img3.doubanio.com/view/photo/sqxs/public/p2538775025.webp" alt=""></a></li>
+                            <li><a><img src="https://img3.doubanio.com/view/photo/sqxs/public/p2538775025.webp" alt=""></a></li>
+                            <li><a><img src="https://img3.doubanio.com/view/photo/sqxs/public/p2538775025.webp" alt=""></a></li>
+                            <li><a><img src="https://img3.doubanio.com/view/photo/sqxs/public/p2538775025.webp" alt=""></a></li>
+                    </ul>
+            
+                </div> -->
+                 <div class="award">
+                         <h3>飞驰人生的获奖情况------（<a href="">全部</a>）</h3>
+                        <a> 第五届豆瓣电影年度榜单</a>
+                        <p>最值得期待的华语电影（提名）</p>
+                </div> -->
+
+
+        </div>
+
+        </div>
+
+        <div  class="sidebar">
+                <div class="watch">
+                    <h3>在哪儿看这部电影  ------</h3>
+                    <ul>
+                        <li><a href="#">优酷视频</a><p>VIP免费观看</p></li>
+                        <li><a href="#">腾讯视频</a><p>VIP免费观看</p></li>
+                        <li><a href="#">芒果TV</a><p>VIP免费观看</p></li>
+                        <li><a href="#">爱奇艺视频</a><p>VIP免费观看</p></li>
+                    </ul>
+                </div>
+                <div class="tag">
+                        <h3>豆瓣成员常用标签  ------</h3>
+                    <ul>
+                        {{each data.tags as item}}
+                        <li><a href="#">{{item}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="popular-doulie">
+                        <h3>以下豆列推荐  ------</h3>
+                        <ul>
+                            <li><a href="#">豆瓣电影【口碑榜】2019-03-11更新</a><span>（影志</span></li>
+                            <li><a href="#">评价人数超过十万的电影（按人数排序）</a><span>（依然范特稀）</span></li>
+                            <li><a href="#">豆瓣上评分人数超100000的电影</a><span>（stupidliar）</span></li>
+                            <li><a href="#">始终会看的电影</a><span>（可可）</span></li>
+                        </ul>
+    
+                    </div>
+
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+{{include './component/footer.html'}}
+
+<script>
+
+
+
+</script>
+</body>
+</html> 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #table{width: 1000px;font-size: 14px;color: #313131;text-align: center;}
+        #table td,th{height: 25px;line-height: 25px;}
+    </style>
+</head>
+<body>
+<table id="table" border="1" cellpadding="0" cellspacing="0">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>籍贯</th>
+        <th>薪水</th>
+        <th>兴趣爱好</th>
+    </tr>
+    <script type="text/html" id="list-template">
+        {{each list as item}}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.sex}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.salary | getSalary}}</td>
+                <td>{{include "childTemplate" item}}</td>
+            </tr>
+        {{/each}}
+    </script>
+</table>
+</body>
+ 
+ 
+<!--子模板-->
+<script id="childTemplate" type="text/html">
+    {{each interest as item}}
+        <span>{{item}}</span>
+    {{/each}}
+</script>
+ 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+
+<script>
+    $(function(){
+        getList(); //初始化加载数据
+    });
+ 
+    //定义获取数据函数
+    function getList(){
+        var data={
+            list:[
+                {id:1,name:"张三",sex:"男",age:41,address:"江西南昌",salary:3000.45,interest:["读书","音乐"]},
+                {id:2,name:"李四",sex:"女",age:29,address:"广东深圳",salary:2189.6,interest:["足球"]},
+                {id:3,name:"王五",sex:"男",age:35,address:"浙江杭州",salary:8975.43,interest:["游泳","打游戏","篮球"]},
+                {id:4,name:"赵六",sex:"男",age:20,address:"湖北武汉",salary:6300,interest:["书法","羽毛球","音乐","兵乓球"]},
+                {id:5,name:"钱七",sex:"女",age:15,address:"湖南长沙",salary:4500.6,interest:["兵乓球","象棋","篮球"]}
+            ]
+        };
+        renderHtml(data);
+    }
+ 
+    //定义渲染页面函数
+    function renderHtml(data){
+        var html=template("list-template",data);
+        $("#table").append(html);
+    }
+ 
+ 
+    //定义辅助函数转换日期格式
+    template.helper("getSalary", function (salary) {
+           return "￥"+parseInt(salary);
+    });
+</script>
+
+--------------------- 
+作者：Buddha_ITXiong 
+来源：CSDN 
+原文：https://blog.csdn.net/buddha_itxiong/article/details/79608990 
+版权声明：本文为博主原创文章，转载请附上博文链接！

@@ -1,0 +1,26 @@
+.more-nav ul {padding-top:1.5rem;padding-bottom:1.5rem;border-bottom: 1px solid #e5ebe4;}
+.more-nav ul li{display:inline;line-height:2rem;margin:1.2rem 1.2rem 0 0;}
+.more-nav ul li a{color:#666;}
+.more-nav ul li a:hover{background-color:#666;}
+.current-tag a{background-color:#4b8ccb;color:#fff;}
+
+.more-main .controler .sorting{float:left;line-height:4rem;}
+.more-main .controler .filter{float:right;line-height:4rem;}
+
+.more-box{width:100%;margin-top:1.5rem;position:relative;overflow:hidden;}
+.more-box>ul>li{ display:inline;}
+.more-box .box:hover{cursor: pointer;}
+.more-box .box ul{float:left;margin-bottom:2rem;}
+.more-box .box ul li{width:120px;display:block;text-align: center;margin-top:0.4rem;margin-right:2.16rem;}
+.more-box .box .poster img{width:120px;height:172px;}
+.more-box .box .title a{color:#037a;}
+.more-box .box .rate{color:#e09015;margin-left:0.2rem;}
+.more-box .loadmore{background-color:#f7f7f7;height:2.5rem;display:block;text-align: center;margin-bottom:10rem;}
+.more-box .loadmore a{line-height:2.5rem;color:#37a}
+
+
+.sidebar .popular-doulie ul li{border-bottom:1px solid #eaeaea;padding-bottom:1rem;padding-top:1rem;}
+.sidebar .popular-doulie{margin-top:2rem;}
+.sidebar .popular-doulie ul li p{font-size:1.2rem;color:#072}
+.sidebar .popular-doulie ul li a{font-size:1.1rem;}
+.sidebar .popular-doulie ul li span{float:right;color:#999;}

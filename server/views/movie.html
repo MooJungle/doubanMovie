@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initilal-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>{{type}}</title>
+<link rel="stylesheet"  href="css/morestyle.css" type="text/css"/>
+<link rel="stylesheet"  href="css/common.css" type="text/css"/>
+</head>
+<body>
+{{include './component/header.html'}}
+
+<div id="center-body">
+        <div class="main-con">
+
+            <div class="main-content">
+        
+    <div class="more-nav">
+    <h1>{{type}}</h1>
+    <ul>
+            {{each tags as tag}}
+        <li><a href="#">{{tag}}</a></li>
+           {{/each}}
+    </ul>
+</div>
+
+<div class="more-main">
+    <div class="controler">
+    <div class="sorting">
+            　　<label><input type="radio" name ="sorting" value="hotty" checked>按热度排序</label>
+            　　<label><input type="radio" name ="sorting" value="time" >按时间排序</label>   
+            　　<label><input type="radio" name ="sorting" value="comment">按评价排序</label>
+    </div>
+    <div class="filter">
+            　　<label><input type="checkbox" name ="filter" value="not-seen">我没看过的</label>
+            　　<label><input type="checkbox" name ="filter" value="can-play">可在线播放</label>   
+    </div>
+</div>
+
+<div class="more-box" >
+            <ul>
+            {{each data as item}}
+        <li>
+        <div class="box" onclick="window.open('/movie/{{item.doubanId}}')" id="{{item.doubanId}}">
+        <ul>
+           <li class="poster "><a> <img src="{{item.poster}}" alt="{{item.title}}"  /></a></li>
+           <li class="title"><a>{{item.title}}<span class="rate">{{item.rate}}</span></a></li>
+           
+        </ul>
+        </div>
+        </li>
+       {{/each}}
+      </ul>
+      <div class="loadmore" id="loadmore"><a href="#">加载更多</a></div>
+    </div>
+    
+
+
+</div>
+
+    </div>
+    <div class="sidebar">
+            <div class="popular-doulie">
+
+                <ul>
+                    <li><p>热门豆列</p></li>
+                    <li><a href="#">【你连名字都这么牛逼】</a><span>6088推荐</span></li>
+                    <li><a href="#">【你连名字都这么牛逼】</a><span>6088推荐</span></li>
+                </ul>
+
+            </div>
+
+
+</div>
+    
+        </div>
+
+   
+
+</div>
+
+
+
+
+
+
+
+
+{{include './component/footer.html'}}
+
+<script>
+
+function getQueryString(name) {
+var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+var r = window.location.hash.substr(1).match(reg);
+if (r != null) {
+return unescape(r[2]);
+}
+return null;
+}
+
+
+document.getElementById("loadmore").addEventListener("click", function(){
+   //创建XMLHttpRequest对象
+var xmlHttp = new XMLHttpRequest();
+//获取值
+//配置XMLHttpRequest对象
+var page_start = getQueryString("page_start");
+xmlHttp.open("post", "http://localhost:4455/movie");
+xmlHttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+//设置回调函数
+xmlHttp.send('tag=热门&page_limit=20&page_start=20');
+xmlHttp.onreadystatechange = function () {
+if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+    console.log(xmlHttp.responseText)
+}
+}
+//发送请求
+
+})
+
+
+
+
+</script>
+
+</body>
+</html>

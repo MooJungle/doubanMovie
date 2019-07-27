@@ -1,0 +1,94 @@
+
+
+
+
+.hot-released-film{margin-bottom:5rem;}
+ .top-box{height:2.8rem;border-bottom:0.077rem solid #e2e2e2}
+ .top-box span {float:left;font-size:1.2rem;color:#111;}
+ .top-box ul li{display:inline;margin:0 0.8rem;line-height:2rem; }
+ .top-box ul li a:hover{color: #fff; background-color: #27a;}
+ .pre , .next{display:flex;justify-content:center;align-items:center;width:1.5rem;height:1.5rem;float:right;margin-left:0.8rem;border-radius:0.75rem;background-color:#37a;} 
+ .top-box .pages {float:right;position:relative;font-size:0.8rem;letter-spacing: 0.3rem;color:red;}
+ .pre a,.next a{color:white;font-weight: bold;font-size: 1.8rem;}
+
+.box-con{width:100%;margin-top:1.5rem;position:relative;height:250px;overflow:hidden;}
+.box-con .container{width:500%;height:200px; position: absolute;}
+.box-con .container>ul>li{ display:inline;}
+.box ul{float:left;width:4%;}
+.box ul li{display:block;text-align: center;margin-top:0.4rem;}
+.box .poster img{width:120px;height:172px;}
+.box-con .box .title a{color:black;white-space:nowrap;text-overflow:ellipsis;}
+.box .rate{color:#e09015;}
+.box .purchase  a{padding:1rem 2rem;line-height:1.8rem;background-color: #268dcd;color:white;border-radius:0.15rem;}
+
+
+.con{margin-bottom:10rem;height:440px;}
+.con .container{left:0;height:440px;}
+.con .top-box ul li{padding-left:0.01rem;}
+.con .top-box ul .more{float:right;color: #669;}
+.con .top-box ul li a{color:#9B9B9B;}
+.con .top-box ul li a:hover{color: #fff; background-color: #27a;}
+.con .top-box ul li:last-child{float:right;position: relative;}
+.con .box-con{height:100%;}
+.con .box-con .box:hover{cursor: pointer;}
+.con .box-con .box ul {text-align: center;width:148px;margin-bottom:1.6rem;}
+.con .box-con .box ul li:not(:first-child){display:inline;}
+.con .box-con .box ul li a{color:#027a;word-wrap:break-word;}
+.con .box-con .box .rate{margin-left:0.2rem;}
+
+
+
+.recommodation{margin-bottom:5rem;}
+.recommodation .box{height:240px;width:20%;margin-bottom:10rem;background-color: #F9F9F9;}
+.recommodation .box-con .container{left:0;width:800%;}
+.recommodation .box .pic{width:350px;height:240px;float:left;}
+.recommodation .box .words{width:330px;padding:48px 24px 24px 24px;display:inline-block;}
+.recommodation .box .title{height:30%;width:500px;text-align: center;float:right;margin-bottom:2rem;}
+.recommodation .box .title a{font-size:1.5rem;padding-left: 2rem;}
+.recommodation .box .description{height:70%;}
+.recommodation .box .description p{color:#999;}
+
+
+.comment{margin-bottom:5rem;}
+.comment  a:hover{color: #fff; background-color: #27a;}
+.comment .review-box ul li{padding-top:2rem;padding-bottom:2rem;border-bottom:0.077rem solid #e2e2e2;}
+.comment .review-box .review .review-bd{margin-left:2rem;line-height:1.5rem;}
+.comment .review-box  img{height:100px;width:70px;vertical-align:middle;float:left;margin-right:1.5rem;}
+.comment .review-box .review .review-bd .review-meta{margin-top:0.5rem;margin-bottom: 0.5rem;}
+.comment .review-box .review .review-bd .review-meta a{color:#9B9B9B}
+.comment .review-box .review .review-bd .review-meta a:hover{color: #fff; background-color: #27a;}
+
+
+
+
+.sidebar .useless{height:2.8rem;background-color:#e3ebec;border-bottom: 1px solid #e5ebe4;border-radius: 0.2rem;margin-bottom:2rem;}
+.sidebar .useless a{line-height:2.8rem;margin-left:1rem;}
+.sidebar .activity{height:12rem;background-color:#e3ebec;border-bottom: 1px solid #e5ebe4;border-radius: 0.2rem;margin-bottom:2rem;}
+.sidebar .activity ul li{margin-top:1rem;color:#072;}
+.sidebar .activity ul li{margin-top:1rem;margin-left:1rem;}
+.sidebar .activity .activity-title{color:#072;font-size:1.2rem;}
+.sidebar  a{color:#37a;}
+.sidebar  a:hover{color: #fff; background-color: #27a;}
+.sidebar .popular-list{margin-bottom:2rem;}
+.sidebar .popular-list ol li{margin-left:2rem;border-bottom:1px solid #eaeaea;padding-bottom:0.8rem;padding-top:0.7rem;}
+.sidebar .popular-list ol li a{color:#37a;}
+.sidebar .popular-list ol li a:hover{color: #fff; background-color: #27a;}
+.sidebar .popular-list-head p,.sidebar .popular-list-head a  {display:inline;margin-right:1rem;}
+.sidebar .popular-doulie ul li{border-bottom:1px solid #eaeaea;padding-bottom:1rem;padding-top:1rem;}
+.sidebar .popular-doulie{margin-bottom:2rem;}
+.sidebar .popular-doulie ul li p{font-size:1.2rem;}
+.sidebar .popular-doulie ul li a{font-size:1.1rem;}
+.sidebar .popular-doulie ul li span{float:right;color:#999;}
+.contact{margin-bottom:2rem;}
+.contact p{font-size:1.2rem;}
+.contact ul li {line-height:2rem;}
+.contact .popular-doulie{border-bottom: 1px solid #e5ebe4;}
+.contact .popular-doulie p{padding-bottom:1.2rem;}
+
+
+
+
+
+
+
+

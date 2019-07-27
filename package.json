@@ -1,0 +1,42 @@
+{
+  "name": "movietrailer",
+  "version": "1.0.0",
+  "description": "douban movie trailer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MooJungle/movietrailer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MooJungle/movietrailer/issues"
+  },
+  "homepage": "https://github.com/MooJungle/movietrailer#readme",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.6",
+    "jquery": "^3.4.1",
+    "koa": "^2.7.0",
+    "koa-art-template": "^1.1.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.5.5",
+    "puppeteer": "^1.15.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {
+    "async": "^2.6.2",
+    "cheerio": "^1.0.0-rc.3",
+    "eventproxy": "^1.0.0",
+    "nodemon": "^1.18.11",
+    "superagent": "^5.0.5"
+  }
+}
