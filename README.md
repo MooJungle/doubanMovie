@@ -31,7 +31,7 @@ douban movie
 
 部分界面展示：
 ![Image text](https://github.com/MooJungle/doubanMovie/blob/master/server/static/img/%E4%B8%BB%E9%A1%B51.jpg)；
-![Image text](https://https://github.com/MooJungle/doubanMovie/blob/master/server/static/img/%E4%B8%BB%E9%A1%B52.jpg)；
+![Image text](https://github.com/MooJungle/doubanMovie/blob/master/server/static/img/%E4%B8%BB%E9%A1%B52.jpg)；
 ![Image text](https://github.com/MooJungle/doubanMovie/blob/master/server/static/img/%E4%B8%BB%E9%A1%B53.jpg)；
 ![Image text](https://github.com/MooJungle/doubanMovie/blob/master/server/static/img/%E7%83%AD%E9%97%A8%E7%94%B5%E5%BD%B1.jpg)；
 ![Image text](https://github.com/MooJungle/doubanMovie/blob/master/server/static/img/%E7%83%AD%E9%97%A8%E7%94%B5%E8%A7%86%E5%89%A7.jpg)；
