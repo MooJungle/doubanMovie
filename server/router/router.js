@@ -25,9 +25,10 @@ router.get('/', async (ctx, next) => {
         let Film = mongoose.model('Film')
         let nowplaying = await Film.find({"data_enough" : "True"}).limit(20)
         let upcoming =  await Film.find({"data_enough" : "False" || "null"}).limit(20)
+        
             await ctx.render('film.html',{
                 nowplaying : nowplaying,
-                upcoming : upcoming
+                upcoming : upcoming,
             })
             });
 
@@ -51,7 +52,7 @@ router.get('/', async (ctx, next) => {
         });
 
 
-        router.post('/movie', async (ctx, next) => {
+        router.post('/movie/view', async (ctx, next) => {
              let Movie = mongoose.model('Movie')
              let postParam = ctx.request.body
              console.log(postParam)

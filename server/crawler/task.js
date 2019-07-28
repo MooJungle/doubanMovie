@@ -8,7 +8,7 @@ const glob = require('glob')
 
 
 ;(async () => {
-    const script = resolve(__dirname,'./tvtrailer.js')
+    const script = resolve(__dirname,'./movietrailer.js')
     const child = cp.fork(script, [])
     let invoked = false
 
@@ -38,32 +38,32 @@ const glob = require('glob')
         // console.log(result)
 
 
-        //  result.forEach(async item => {
-        //     if(item.doubanId){
-        //     let movie = await Movie.findOne({
-        //         doubanId: item.doubanId
-        //     })
-        //     if(!movie){
-        //         movie= new Movie(item)
-        //         await movie.save()
-        //     } 
-        // }
-        // })
-
-
-
-          result.forEach(async item => {
+         result.forEach(async item => {
             if(item.doubanId){
-            let tv = await Tv.findOne({
+            let movie = await Movie.findOne({
                 doubanId: item.doubanId
             })
-
-            if(!tv){
-                tv= new Tv(item)
-                await tv.save()
+            if(!movie){
+                movie= new Movie(item)
+                await movie.save()
             } 
-          }
+        }
         })
+
+
+
+        //   result.forEach(async item => {
+        //     if(item.doubanId){
+        //     let tv = await Tv.findOne({
+        //         doubanId: item.doubanId
+        //     })
+
+        //     if(!tv){
+        //         tv= new Tv(item)
+        //         await tv.save()
+        //     } 
+        //   }
+        // })
 
 
 

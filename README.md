@@ -17,3 +17,11 @@ douban movie
 2、ajax实现标签选择数据。
 3、懒加载。
 4、影评。
+
+
+注意：
+1、下载项目：git clone https://github.com/MooJungle/cloudMusic.git
+2、npm install下载相关依赖。
+3、开启mongodb数据库，打开main.js1第13行注释，运行npm start爬虫，须修修改task.js分别爬取热门电影、热门电视剧、正在上映的电影数据。
+4、注释main.js第13行，开启第14行注释.运行npm start通过数据库中的数据在豆瓣电影api获取详细数据。
+5、注释main.js第14行，运行npm start预览效果。

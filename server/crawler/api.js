@@ -2,7 +2,7 @@
 //const task = require('./task.js')
 axios = require('axios')
 const mongoose = require('mongoose')
-const Movie = mongoose.model('Movie')
+const Movie = mongoose.model('Tv')
 //const Category = mongoose.model('Category')
 
 
