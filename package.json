@@ -27,7 +27,7 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "mongoose": "^5.5.5",
+    "mongoose": "^5.7.5",
     "puppeteer": "^1.15.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
