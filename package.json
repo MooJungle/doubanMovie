@@ -20,7 +20,7 @@
   "dependencies": {
     "art-template": "^4.13.2",
     "axios": "^0.18.0",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "jquery": "^3.4.1",
     "koa": "^2.7.0",
     "koa-art-template": "^1.1.1",
