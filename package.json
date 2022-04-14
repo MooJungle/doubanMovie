@@ -33,7 +33,7 @@
     "request-promise-native": "^1.0.7"
   },
   "devDependencies": {
-    "async": "^2.6.2",
+    "async": "^3.2.2",
     "cheerio": "^1.0.0-rc.3",
     "eventproxy": "^1.0.0",
     "nodemon": "^1.18.11",
